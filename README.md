@@ -1,4 +1,4 @@
-# SSH Code Editor
+# SSH Editor
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8.svg)
@@ -28,8 +28,8 @@ Professional code editor accessible via browser for editing remote files via SSH
 ### Compile from sources
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ssh-code-editor.git
-cd ssh-code-editor
+git clone https://github.com/your-username/ssh_editor.git
+cd ssh_editor
 
 # Install dependencies
 go mod tidy
