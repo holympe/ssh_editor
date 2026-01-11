@@ -4,42 +4,41 @@
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-Éditeur de code professionnel accessible via navigateur pour éditer des fichiers distants via SSH/SFTP. Interface moderne inspirée de VSCode.
+Professional code editor accessible via browser for editing remote files via SSH/SFTP. Modern interface inspired by VSCode.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- **Interface web** moderne et intuitive
-- **Connexion SSH/SFTP** sécurisée
-- **Explorateur de fichiers** avec arborescence complète
-- **Éditeur de code** avec support multi-langages
-- **Sauvegarde** en temps réel (Ctrl+S)
-- **Support sudo** pour éditer les fichiers système
-- **Création/suppression** de fichiers et dossiers
-- **Thème sombre** professionnel
-- **Léger et rapide** - un seul binaire, aucune dépendance
-
+- **Modern and intuitive web interface**
+- **Secure SSH/SFTP connection**
+- **File explorer** with complete tree structure
+- **Code editor** with multi-language support
+- **Real-time saving** (Ctrl+S)
+- **Sudo support** for editing system files
+- **Create/delete** files and folders
+- **Professional dark theme**
+- **Lightweight and fast** - single binary, no dependencies
 
 ## Installation
 
-### Prérequis
+### Prerequisites
 
-- Go 1.21 ou supérieur (pour compiler depuis les sources)
-- Accès SSH à un serveur distant
+- Go 1.21 or higher (to compile from sources)
+- SSH access to a remote server
 
-### Compilation depuis les sources
+### Compile from sources
 ```bash
-# Cloner le dépôt
-git clone https://github.com/votre-username/ssh-code-editor.git
+# Clone the repository
+git clone https://github.com/your-username/ssh-code-editor.git
 cd ssh-code-editor
 
-# Installer les dépendances
+# Install dependencies
 go mod tidy
 
-# Compiler
+# Compile
 go build -o ssh-editor
 ```
 
-### Compilation multi-plateforme
+### Cross-platform compilation
 
 #### Windows (PowerShell)
 ```powershell
@@ -65,9 +64,9 @@ GOOS=darwin GOARCH=amd64 go build -o ssh-editor-macos
 GOOS=darwin GOARCH=arm64 go build -o ssh-editor-macos-arm
 ```
 
-## 📖 Utilisation
+## 📖 Usage
 
-### Démarrage
+### Startup
 
 #### Windows
 ```cmd
@@ -76,58 +75,58 @@ ssh-editor.exe
 
 #### Linux/macOS
 ```bash
-# Rendre exécutable (première fois seulement)
+# Make executable (first time only)
 chmod +x ssh-editor-linux
 
-# Lancer
+# Launch
 ./ssh-editor-linux
 ```
 
-### Accès
+### Access
 
-1. Ouvrez votre navigateur sur **http://localhost:8080**
-2. Une fenêtre de connexion SSH s'affiche automatiquement
+1. Open your browser at **http://localhost:8080**
+2. An SSH connection window appears automatically
 
-### Connexion SSH
+### SSH Connection
 
-Remplissez les informations :
+Fill in the information:
 
-- **Type** : Dossier ou Fichier unique
-- **Hôte** : IP du serveur (ex: `192.168.1.100`)
-- **Port** : Port SSH (défaut: `22`)
-- **Utilisateur** : Nom d'utilisateur SSH
-- **Mot de passe** : Mot de passe SSH
-- **Chemin** : Chemin du dossier/fichier (ex: `/home/user/project`)
-- **Utiliser sudo** : Cocher si vous éditez des fichiers système
+- **Type**: Folder or Single file
+- **Host**: Server IP (e.g., `192.168.1.100`)
+- **Port**: SSH port (default: `22`)
+- **Username**: SSH username
+- **Password**: SSH password
+- **Path**: Folder/file path (e.g., `/home/user/project`)
+- **Use sudo**: Check if editing system files
 
-### Raccourcis clavier
+### Keyboard shortcuts
 
-- **Ctrl + S** : Sauvegarder le fichier
-- **Tab** : Indentation (4 espaces)
-- **Clic droit** : Menu contextuel (supprimer)
+- **Ctrl + S**: Save file
+- **Tab**: Indentation (4 spaces)
+- **Right click**: Context menu (delete)
 
-### Fonctionnalités avancées
+### Advanced features
 
-#### Créer un fichier/dossier
-Cliquez sur les boutons `+` ou `□` dans l'en-tête de l'explorateur.
+#### Create a file/folder
+Click the `+` or `□` buttons in the explorer header.
 
-#### Supprimer un fichier/dossier
-Clic droit sur l'élément → Supprimer
+#### Delete a file/folder
+Right click on the item → Delete
 
-#### Édition avec sudo
-Cochez "Utiliser sudo" lors de la connexion pour éditer les fichiers système nécessitant des privilèges root.
+#### Editing with sudo
+Check "Use sudo" when connecting to edit system files requiring root privileges.
 
-## Dépendances Go
+## Go Dependencies
 ```go
 github.com/pkg/sftp
 golang.org/x/crypto/ssh
 ```
 
-## Sécurité
+## Security
 
-**Important** :
+**Important**:
 
-- Les mots de passe SSH sont stockés temporairement en mémoire
-- Utilisez HTTPS en production (reverse proxy recommandé)
-- Limitez l'accès au port 8080 via firewall
-- N'exposez pas directement sur Internet sans authentification supplémentaire
+- SSH passwords are stored temporarily in memory
+- Use HTTPS in production (reverse proxy recommended)
+- Limit access to port 8080 via firewall
+- Do not expose directly on the Internet without additional authentication
