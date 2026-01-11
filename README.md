@@ -28,7 +28,7 @@ Professional code editor accessible via browser for editing remote files via SSH
 ### Compile from sources
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ssh_editor.git
+git clone https://github.com/lomamalo/ssh_editor.git
 cd ssh_editor
 
 # Install dependencies
